@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BadJokes Platform
 
 > 🎭 Plataforma web moderna para compartir, votar y comentar chistes malos con arquitectura profesional y mejores prácticas de seguridad.
@@ -689,3 +690,6 @@ Esta documentación proporciona **TODO** lo necesario para:
 **Para**: ChistesMalos - Plataforma de chistes malos  
 **Todos los derechos reservados** © 2026
 
+=======
+# ChistesMalos
+>>>>>>> fa849df6807663f1b3305264603d049e37ca6400
