@@ -1,0 +1,45 @@
+version: '3.9'
+services:
+  app:
+    build: .
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME=chistes_malos_db
+      - DB_USER=root
+      - DB_PASSWORD=password
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - JWT_SECRET=ChangeThisJWTSecretInProduction0123456789
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+      - redis
+    networks:
+      - chistes-net
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: chistes_malos_db
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 3306:3306
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - chistes-net
+  redis:
+    image: redis:7
+    ports:
+      - 6379:6379
+    networks:
+      - chistes-net
+
+networks:
+  chistes-net:
+    driver: bridge
+
+volumes:
+  db_data:

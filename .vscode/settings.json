@@ -1,0 +1,5 @@
+{
+    "claudeCodeChat.permissions.yoloMode": true,
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.compile.nullAnalysis.mode": "automatic"
+}

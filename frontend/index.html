@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BadJokes Platform - Plataforma de compartición de chistes malos">
+    <meta name="author" content="BadJokes Team">
+    <title>BadJokes Platform - Comparte tus peores chistes</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/" class="logo">
+                    <i class="fas fa-laugh-squint"></i>
+                    <span>BadJokes</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/" class="nav-link active">Inicio</a></li>
+                <li><a href="/trending" class="nav-link">Trending</a></li>
+                <li><a href="/categories" class="nav-link">Categorías</a></li>
+                <li class="auth-section" id="authSection">
+                    <a href="/login" class="nav-link btn-login">Iniciar Sesión</a>
+                    <a href="/register" class="nav-link btn-register">Registrarse</a>
+                </li>
+                <li class="user-section" id="userSection" style="display: none;">
+                    <a href="/create" class="nav-link btn-primary">+ Nuevo Chiste</a>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" id="userDropdown">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="usernameDisplay"></span>
+                        </button>
+                        <div class="dropdown-menu" id="dropdownMenu">
+                            <a href="/profile" class="dropdown-item">Mi Perfil</a>
+                            <a href="/my-jokes" class="dropdown-item">Mis Chistes</a>
+                            <hr>
+                            <a href="#" class="dropdown-item" id="logoutBtn">Cerrar Sesión</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="app" class="main-content">
+        <!-- Content will be loaded here by router -->
+    </main>
+
+    <!-- Modal Container -->
+    <div id="modalContainer" class="modal" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BadJokes Platform</h3>
+                    <p>Plataforma para compartir y disfrutar de los chistes más malos de internet.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="/about">Acerca de Nosotros</a></li>
+                        <li><a href="/privacy">Privacidad</a></li>
+                        <li><a href="/terms">Términos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociales</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BadJokes Platform. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/api/client.js"></script>
+    <script src="js/utils/auth.js"></script>
+    <script src="js/utils/validator.js"></script>
+    <script src="js/utils/formatter.js"></script>
+    <script src="js/utils/storage.js"></script>
+    <script src="js/utils/toast.js"></script>
+    <script src="js/components/jokeCard.js"></script>
+    <script src="js/components/modal.js"></script>
+    <script src="js/components/pagination.js"></script>
+    <script src="js/pages/home.js"></script>
+    <script src="js/pages/login.js"></script>
+    <script src="js/pages/register.js"></script>
+    <script src="js/pages/create.js"></script>
+    <script src="js/pages/detail.js"></script>
+    <script src="js/pages/categories.js"></script>
+    <script src="js/pages/trending.js"></script>
+    <script src="js/pages/profile.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

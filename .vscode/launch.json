@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ChistesMalosApplication<chistes-malos>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.chistesmalos.ChistesMalosApplication",
+            "projectName": "chistes-malos",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

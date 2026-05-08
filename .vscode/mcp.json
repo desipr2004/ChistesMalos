@@ -1,0 +1,9 @@
+{
+	"servers": {
+		"beehiv": {
+			"url": "https://mcp.beehiiv.com/mcp",
+			"type": "http"
+		}
+	},
+	"inputs": []
+}

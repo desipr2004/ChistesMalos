@@ -1,0 +1,254 @@
+/* Animaciones */
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Aplicar animaciones */
+
+.fade-in {
+    animation: fadeIn var(--transition-normal);
+}
+
+.slide-in {
+    animation: slideIn var(--transition-normal);
+}
+
+.slide-out {
+    animation: slideOut var(--transition-normal);
+}
+
+.bounce {
+    animation: bounce var(--transition-normal);
+}
+
+.pulse {
+    animation: pulse var(--transition-normal);
+}
+
+.scale-in {
+    animation: scaleIn var(--transition-normal);
+}
+
+.slide-down {
+    animation: slideDown var(--transition-normal);
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+/* Hover Effects */
+
+button:not(:disabled):hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+.card:hover {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width var(--transition-fast);
+}
+
+.nav-link:not(.active):hover::before {
+    width: 100%;
+}
+
+/* Transiciones suaves */
+
+* {
+    transition: background-color var(--transition-fast),
+                color var(--transition-fast),
+                border-color var(--transition-fast),
+                box-shadow var(--transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    animation: scaleIn 0.3s ease-in-out;
+}
+
+/* Loading skeleton */
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        var(--gray) 25%,
+        var(--dark-gray) 50%,
+        var(--gray) 75%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* Page transitions */
+
+.page-enter {
+    animation: fadeIn var(--transition-normal);
+}
+
+.page-exit {
+    animation: fadeOut var(--transition-normal);
+}
+
+/* Toast animations */
+
+.toast.enter {
+    animation: slideIn var(--transition-normal);
+}
+
+.toast.exit {
+    animation: slideOut var(--transition-normal);
+}
+
+/* Modal animations */
+
+.modal.enter {
+    animation: fadeIn var(--transition-normal);
+}
+
+.modal-content.enter {
+    animation: scaleIn var(--transition-normal);
+}
+
+/* Dropdown animations */
+
+.dropdown-menu.enter {
+    animation: slideDown var(--transition-normal);
+}
+
+/* Ripple effect */
+
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.ripple:active::after {
+    animation: ripple-animation 0.6s ease-out;
+}
+
+@keyframes ripple-animation {
+    to {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}

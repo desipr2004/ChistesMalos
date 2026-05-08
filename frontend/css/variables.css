@@ -1,0 +1,88 @@
+/* Variables CSS - Colores, espaciado, tipografía */
+
+:root {
+    /* Colores Primarios */
+    --primary: #FF6B6B;
+    --primary-dark: #FF5252;
+    --primary-light: #FF8787;
+    
+    /* Colores Secundarios */
+    --secondary: #4ECDC4;
+    --secondary-dark: #45B7AA;
+    --secondary-light: #6FE5E0;
+    
+    /* Colores Neutros */
+    --white: #FFFFFF;
+    --light-gray: #F5F6FA;
+    --gray: #E0E0E0;
+    --dark-gray: #BDBDBD;
+    --text-light: #757575;
+    --text-dark: #212121;
+    --black: #000000;
+    
+    /* Colores de Estado */
+    --success: #51CF66;
+    --warning: #FFD93D;
+    --error: #FF6B6B;
+    --info: #339AF0;
+    
+    /* Sombras */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    
+    /* Espaciado */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    
+    /* Tipografía */
+    --font-family: 'Poppins', sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 2.5rem;
+    
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
+    
+    /* Transiciones */
+    --transition-fast: 150ms ease-in-out;
+    --transition-normal: 300ms ease-in-out;
+    --transition-slow: 500ms ease-in-out;
+    
+    /* Z-index */
+    --z-dropdown: 1000;
+    --z-modal: 2000;
+    --z-toast: 3000;
+    --z-navbar: 999;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --white: #1a1a1a;
+        --light-gray: #2a2a2a;
+        --gray: #3a3a3a;
+        --dark-gray: #4a4a4a;
+        --text-light: #a0a0a0;
+        --text-dark: #e0e0e0;
+        --black: #ffffff;
+    }
+}
